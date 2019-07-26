@@ -1,19 +1,23 @@
+interface Roamable {
+    fun roam()
+}
+
 abstract class Animal {
     abstract val image = ""
     abstract val food = ""
     abstract val habitat = ""
-    var hunger = 10
+    open var hunger = 10
 
 
     abstract fun makeNoise() {
         println("The animal is making a noise")
     }
 
-    abstract fun eat() {
+    override fun eat() {
         println("The animal is eating")
     }
 
-    fun roam() {
+    open fun roam() {
         println("The animal is roaming")
     }
 
